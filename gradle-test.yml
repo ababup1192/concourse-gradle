@@ -11,4 +11,4 @@ inputs:
   - name: gradle-project
 
 run:
-  path: ./git-repo/gradle-test.sh
+  path: ls
