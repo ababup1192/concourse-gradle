@@ -7,9 +7,8 @@ image_resource:
     repository: jtech/oracle-jdk
 
 inputs:
+  - name: git-repo
   - name: gradle-project
 
 run:
-  path: ls
-  args:
-    - gradle-project
+  path: ./git-repo/gradle-test.sh
