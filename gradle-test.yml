@@ -11,9 +11,4 @@ inputs:
   - name: gradle-project
 
 run:
-  path: bash
-  args:
-    - -c
-    - |
-      cd gradle-project
-      gradle test
+  path: ./git-repo/gradle-test.sh

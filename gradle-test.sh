@@ -1,2 +1,3 @@
 #!/bin/bash
-find .
+cd gradle-project
+gradle test
