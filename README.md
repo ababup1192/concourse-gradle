@@ -44,5 +44,7 @@ $ fly -t lite sp -p gradle-ci -c pipeline.yml -l ~/.concourse/credentials.yml
 $ fly -t lite up -p gradle-ci
 ```
 
+# Show report
 
+[Report](https://github.com/ababup1192/hello-gradle-report)
 
