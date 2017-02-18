@@ -1,4 +1,4 @@
 #!/bin/bash
 cd gradle-project
 gradle test
-cp -r build ../out
+cp -r build/* ../out
