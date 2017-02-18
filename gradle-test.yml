@@ -12,7 +12,7 @@ inputs:
 run:
   path: bash
   args:
-    - c
-    - |
-      cd gradle-project
-      gradlew test
+  - c
+  - |
+    cd gradle-project
+    gradlew test
