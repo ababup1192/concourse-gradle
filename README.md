@@ -1,5 +1,7 @@
 # Concourse gradle
 
+![Pipeline](https://raw.githubusercontent.com/ababup1192/concourse-gradle/master/img/pipe-image.png)
+
 # Prepare
 
 ## Install
