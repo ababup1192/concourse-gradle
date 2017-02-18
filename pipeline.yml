@@ -27,6 +27,7 @@ jobs:
     trigger: true
   - task: gradle-test
     file: git-repo/gradle-test.yml
+  - get: report
   - task: commit-report
     file: git-repo/commit-report.yml
   - put: report
