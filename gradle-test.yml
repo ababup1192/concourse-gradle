@@ -10,6 +10,7 @@ inputs:
   - name: gradle-project
 
 run:
-  path: ./gradle-project/gradlew
+  path: ls
   args:
-    - test
+    - gradle-project
+
