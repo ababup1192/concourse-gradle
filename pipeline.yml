@@ -1,0 +1,22 @@
+---
+# Gradle Resourse
+resources:
+- name: git-repo
+  type: git
+  source:
+    uri: https://github.com/ababup1192/hello-gradle.git
+
+- name: gradle-project
+  type: git
+  source:
+    uri: https://github.com/ababup1192/hello-gradle.git
+
+jobs:
+- name: gradle-ci
+  public: true
+  plan:
+  - get: git-repo
+  - get: gradle-project
+    trigger: true
+  - task: gradle-test
+    file: git-repo/gradle-test.yml
