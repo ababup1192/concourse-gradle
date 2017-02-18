@@ -11,6 +11,9 @@ inputs:
   - name: gradle-project
 
 run:
-  path: ./gradle-project/gradlew
+  path: bash
   args:
-    - test
+    - -c
+    - |
+      cd gradle-project
+      gradle test
