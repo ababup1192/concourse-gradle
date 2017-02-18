@@ -4,7 +4,7 @@ resources:
 - name: git-repo
   type: git
   source:
-    uri: https://github.com/ababup1192/hello-gradle.git
+    uri: https://github.com/ababup1192/concourse-gradle.git
 
 - name: gradle-project
   type: git
