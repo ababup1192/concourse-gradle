@@ -6,9 +6,8 @@ image_resource:
     repository: getourneau/alpine-bash-git
 inputs:
   - name: git-repo
-  - name: gradle-project
-  - name: report
   - name: out
+  - name: report
 outputs:
   - name: updated-report
 run:
