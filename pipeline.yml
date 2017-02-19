@@ -28,10 +28,10 @@ jobs:
   - get: report
   - task: gradle-test
     file: git-repo/gradle-test.yml
-  - task: commit-report
-    file: git-repo/commit-report.yml
     ensure:
-      put: report
-      params:
-        repository: updated-report
-
+      do:
+        - task: commit-report
+          file: git-repo/commit-report.yml
+        - put: report
+          params:
+            repository: updated-report
