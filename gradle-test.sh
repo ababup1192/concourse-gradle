@@ -1,8 +1,11 @@
 #!/bin/bash
 cd gradle-project
-STATUS=gradle test
+
+gradle test
+status=$(echo $?)
 cp -r build ../out
+
 echo ===start===
 ls ../out
 echo ===end===
-return STATUS
+return status
