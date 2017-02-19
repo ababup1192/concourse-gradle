@@ -11,3 +11,4 @@ git config --global user.name "ababup1192"
 
 git add -A
 git commit -m "Update report"
+git push
