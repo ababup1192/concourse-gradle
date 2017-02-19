@@ -27,8 +27,6 @@ jobs:
   - get: git-repo
   - get: report
   - put: report
-    params:
-      repository: updated-report
   - task: gradle-test
     file: git-repo/gradle-test.yml
     on_failure:
