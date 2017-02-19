@@ -31,4 +31,6 @@ jobs:
     on_failure:
       task: commit-report
       file: git-repo/commit-report.yml
-
+  - put: report
+    params:
+      repository: updated-report
