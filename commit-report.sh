@@ -13,4 +13,3 @@ git remote -v
 
 git add -A
 git commit -m "Update report" -a
-git push origin master
