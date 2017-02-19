@@ -4,7 +4,7 @@ git clone report updated-report
 
 cd updated-report/
 
-cp -a ../out/* ./
+cp -a ../out/build/* ./
 
 git config --global user.email "ababup1192@gmail.com"
 git config --global user.name "ababup1192"
