@@ -28,18 +28,10 @@ jobs:
   - get: report
   - task: gradle-test
     file: git-repo/gradle-test.yml
-    on_success:
-      do:
-        - task: commit-report
-          file: git-repo/commit-report.yml
-        - put: report
-          params:
-            repository: updated-report
-    on_failure:
-      do:
-        - task: commit-report
-          file: git-repo/commit-report.yml
-        - put: report
-          params:
-            repository: updated-report
+  - do:
+    - task: commit-report
+      file: git-repo/commit-report.yml
+    - put: report
+      params:
+        repository: updated-report
 
