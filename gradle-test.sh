@@ -9,4 +9,5 @@ cp -r build ../out
 echo ===start===
 ls ../out
 echo ===end===
-echo $status
+
+return status 2> /dev/null
