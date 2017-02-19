@@ -22,13 +22,14 @@ jobs:
 - name: gradle-ci
   public: true
   plan:
-  - get: git-repo
   - get: gradle-project
     trigger: true
+  - get: git-repo
+  - get: report
   - task: gradle-test
     file: git-repo/gradle-test.yml
-  - get: report
-  - task: commit-report
-    file: git-repo/commit-report.yml
+    on_failure:
+      task: commit-report
+      file: git-repo/commit-report.yml
 
 
