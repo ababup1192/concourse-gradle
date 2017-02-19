@@ -26,13 +26,12 @@ jobs:
     trigger: true
   - get: git-repo
   - get: report
+  - put: report
+    params:
+      repository: updated-report
   - task: gradle-test
     file: git-repo/gradle-test.yml
     on_failure:
       task: commit-report
       file: git-repo/commit-report.yml
-      put: report
-      params:
-        repository: updated-report
-
-
+ 
