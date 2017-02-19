@@ -12,3 +12,7 @@ outputs:
   - name: updated-report
 run:
   path: ./git-repo/commit-report.sh
+put: report
+params:
+  repository: updated-report
+
