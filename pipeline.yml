@@ -36,3 +36,5 @@ jobs:
         - put: report
           params:
             repository: updated-report
+        - task:
+          file: git-repo/slack-notice.yml
