@@ -43,7 +43,9 @@ BOTNAME=${BOTNAME:-"Concourse"}
 FACEICON=${FACEICON:-":ghost:"}
 #見出しとなるようなメッセージ
 
-status=`cat ../result/status`
+ls
+pwd
+status=`cat ./result/status`
 if test $status -eq 0  ; then
     WEBMESSAGE=":ok:\tTest Success"
 else
