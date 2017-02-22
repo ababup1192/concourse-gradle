@@ -4,5 +4,6 @@ image_resource:
   type: docker-image
   source:
     repository: byrnedo/alpine-curl
-    run:
-      path: ./git-repo/slack-notice.sh
+
+run:
+  path: ./git-repo/slack-notice.sh
