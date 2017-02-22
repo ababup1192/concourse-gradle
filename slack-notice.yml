@@ -5,5 +5,8 @@ image_resource:
   source:
     repository: byrnedo/alpine-curl
 
+inputs:
+  - name: result
+
 run:
   path: ./git-repo/slack-notice.sh

@@ -42,18 +42,14 @@ BOTNAME=${BOTNAME:-"Concourse"}
 #slack アイコン
 FACEICON=${FACEICON:-":ghost:"}
 #見出しとなるようなメッセージ
-MESSAGE=${MESSAGE:-"aaaaaa"}
 
-if [ -p /dev/stdin ] ; then
-    #改行コードをslack用に変換
-    cat - | tr '\n' '\\' | sed 's/\\/\\n/g'  > ${MESSAGEFILE}
+status=`cat ../result/status`
+if test $status -eq 0  ; then
+    WEBMESSAGE=":ok:\tTest Success"
 else
-    echo "nothing stdin"
-    exit 1
+    WEBMESSAGE=":no_entry_sign:\tTest Failed"
 fi
 
-WEBMESSAGE='``'`cat ${MESSAGEFILE}`'``'
-
 #Incoming WebHooks送信
-curl -s -S -X POST --data-urlencode "payload={\"channel\": \"${CHANNEL}\", \"username\": \"${BOTNAME}\", \"icon_emoji\": \"${FACEICON}\", \"text\": \"${MESSAGE}${WEBMESSAGE}\" }" ${WEBHOOKURL} >/dev/null
+curl -s -S -X POST --data-urlencode "payload={\"username\": \"${BOTNAME}\", \"icon_emoji\": \"${FACEICON}\", \"text\": \"${WEBMESSAGE}\" }" ${WEBHOOKURL} >/dev/null
 

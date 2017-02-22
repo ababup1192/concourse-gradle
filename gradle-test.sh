@@ -5,5 +5,6 @@ gradle test
 status=$(echo $?)
 
 cp -r build ../out
+echo $status > ../result/status
 
 exit $status
