@@ -5,10 +5,10 @@ set -eu
 #Incoming WebHooksのURL
 WEBHOOKURL="https://hooks.slack.com/services/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"
 #メッセージを保存する一時ファイル
-MESSAGEFILE=`mktemp -t webhooks`
-trap "
-rm ${MESSAGEFILE}
-" 0
+# MESSAGEFILE=`mktemp -t webhooks`
+# trap "
+# rm ${MESSAGEFILE}
+# " 0
 
 usage_exit() {
     echo "Usage: $0 [-m message] [-c channel] [-i icon] [-n botname]" 1>&2
