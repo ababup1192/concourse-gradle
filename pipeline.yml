@@ -9,26 +9,24 @@ resources:
 - name: gradle-project
   type: git
   source:
-    uri: https://github.com/ababup1192/hello-gradle.git
+    uri: {{target-uri}}
 
 - name: report
   type: git
   source:
-    uri: git@github.com:ababup1192/hello-gradle-report.git
+    uri: {{report-uri}}
     private_key: {{github-private-key}}
     branch: master
-    git_config:
-      user.name:  {{git-name}}
-      user.email: {{git-email}}
 
 jobs:
 - name: gradle-ci
   public: true
   plan:
-  - get: gradle-project
-    trigger: true
-  - get: git-repo
-  - get: report
+  - aggregate:
+    - get: gradle-project
+      trigger: true
+    - get: git-repo
+    - get: report
   - task: gradle-test
     file: git-repo/gradle-test.yml
     ensure:
