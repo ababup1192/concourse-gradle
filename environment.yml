@@ -3,4 +3,4 @@
 git-repo: https://github.com/ababup1192/concourse-gradle.git
 # Test Target (Gradle Project)
 target-uri: https://github.com/ababup1192/hello-gradle.git
-report-uri: git@github.com:ababup1192/hello-gradle.git
+report-uri: git@github.com:ababup1192/hello-gradle-report.git
