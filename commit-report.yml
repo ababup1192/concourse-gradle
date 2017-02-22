@@ -12,4 +12,3 @@ outputs:
   - name: updated-report
 run:
   path: ./git-repo/commit-report.sh
-  args: [{github-private-key}]
