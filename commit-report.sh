@@ -6,7 +6,7 @@ cd updated-report/
 
 cp -a ../out/build/reports ../out/build/test-results ./
 
-echo {{github-private-key}}
+echo $1
 
 git config --global user.email "ababup1192@gmail.com"
 git config --global user.name "ababup1192"
