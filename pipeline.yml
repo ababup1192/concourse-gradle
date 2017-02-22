@@ -18,8 +18,8 @@ resources:
     private_key: {{github-private-key}}
     branch: master
     git_config:
-      - name:  {{git-name}}
-      - email: {{git-email}}
+      user.name:  {{git-name}}
+      user.email: {{git-email}}
 
 jobs:
 - name: gradle-ci
