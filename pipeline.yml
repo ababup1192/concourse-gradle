@@ -19,7 +19,7 @@ resources:
     branch: master
     git_config:
       - name:  {{git-name}}
-        email: {{git-email}}
+      - email: {{git-email}}
 
 jobs:
 - name: gradle-ci
