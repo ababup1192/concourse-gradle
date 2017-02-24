@@ -26,6 +26,17 @@ github-private-key: |
   -----END RSA PRIVATE KEY-----
 ```
 
+environment.yml
+
+```yaml
+---
+# This Concourse Repository
+git-repo: https://github.com/ababup1192/concourse-gradle.git
+# Test Target (Gradle Project)
+target-uri: https://github.com/ababup1192/hello-gradle.git
+report-uri: git@github.com:ababup1192/hello-gradle-report.git
+```
+
 # Launch
 
 ```
@@ -42,7 +53,7 @@ $ fly -t lite login -c http://192.168.100.4:8080
 ## Execute
 
 ```
-$ fly -t lite sp -p gradle-ci -c pipeline.yml -l ~/.concourse/credentials.yml
+$ fly -t lite sp -p gradle-ci -c pipeline.yml -l ~/.concourse/credentials.yml -l environment.yml
 $ fly -t lite up -p gradle-ci
 ```
 
