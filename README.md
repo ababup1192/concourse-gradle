@@ -39,6 +39,15 @@ target-uri: https://github.com/ababup1192/hello-gradle.git
 report-uri: git@github.com:ababup1192/hello-gradle-report.git
 ```
 
+### Slack Webhook URI
+
+slack-notice.sh
+
+```
+# Incoming WebHooks URL
+WEBHOOKURL="https://hooks.slack.com/services/xxxx/xxxxxx"
+PPP
+
 # Launch
 
 ```

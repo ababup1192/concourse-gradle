@@ -3,7 +3,7 @@
 set -eu
 
 # Incoming WebHooks URL
-WEBHOOKURL="https://hooks.slack.com/services/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"
+WEBHOOKURL="https://hooks.slack.com/services/xxxx/xxxxxx"
 
 # Bot name
 BOTNAME=${BOTNAME:-"Concourse"}
