@@ -26,7 +26,7 @@ github-private-key: |
   -----END RSA PRIVATE KEY-----
 ```
 
-environment.yml
+### Environment
 
 ```yaml
 ---
