@@ -46,7 +46,7 @@ slack-notice.sh
 ```
 # Incoming WebHooks URL
 WEBHOOKURL="https://hooks.slack.com/services/xxxx/xxxxxx"
-PPP
+```
 
 # Launch
 
