@@ -5,7 +5,7 @@ gradle test
 status=$(echo $?)
 
 cp -r build ../out
-cp -r src/test ../out
+cp -r src/test/java ../out
 echo $status > ../result/status
 
 exit $status
